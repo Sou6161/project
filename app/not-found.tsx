@@ -1,7 +1,3 @@
-import { notFound } from 'next/navigation';
-
-// This is an optional function to programmatically trigger the not-found page
-// You can call this in other pages if needed, but it's not required for the 404 page itself
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
