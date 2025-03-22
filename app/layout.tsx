@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Theme } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
-import { ThemeProvider } from '@/components/theme-provider';4
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'ZeroBG',
     images: [
       {
-        url: 'https://t4.ftcdn.net/jpg/01/35/07/55/360_F_135075568_S87PSNuaUDjBgnsvUtlTvgLFf3elOOdg.jpg', // Replace with your actual image URL
+        url: 'https://t4.ftcdn.net/jpg/01/35/07/55/360_F_135075568_S87PSNuaUDjBgnsvUtlTvgLFf3elOOdg.jpg',
         width: 1200,
         height: 630,
         alt: 'ZeroBG Background Remover',
@@ -43,10 +43,28 @@ export const metadata: Metadata = {
     title: 'ZeroBG - Free AI Background Remover',
     description:
       'Remove backgrounds from images instantly with ZeroBG. Powered by AI, our tool offers fast, automatic, and free background removal.',
-    images: ['https://t4.ftcdn.net/jpg/01/35/07/55/360_F_135075568_S87PSNuaUDjBgnsvUtlTvgLFf3elOOdg.jpg'], // Replace with your actual image URL
+    images: [
+      'https://t4.ftcdn.net/jpg/01/35/07/55/360_F_135075568_S87PSNuaUDjBgnsvUtlTvgLFf3elOOdg.jpg',
+    ],
   },
   other: {
-    'google-adsense-account': 'ca-pub-7936833075670517', // Google verification meta tag
+    'google-adsense-account': 'ca-pub-7936833075670517',
+  },
+  icons: {
+    icon: [
+      {
+        url: '/favicon.png', // Reference the favicon in the public directory
+        type: 'image/png',
+        sizes: '32x32', // Adjust based on the actual size of your favicon
+      },
+    ],
+    apple: [
+      {
+        url: '/favicon.png', // You can create a separate apple-touch-icon.png (e.g., 180x180)
+        type: 'image/png',
+        sizes: '180x180',
+      },
+    ],
   },
 };
 
