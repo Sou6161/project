@@ -5,10 +5,17 @@ import { motion } from "framer-motion";
 
 interface UploadSectionProps {
   onImageUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  currentImageCount: number; // Add prop for current image count
+  maxImages: number; // Add prop for max image limit
   className?: string;
 }
 
-export default function UploadSection({ onImageUpload, className }: UploadSectionProps) {
+export default function UploadSection({
+  onImageUpload,
+  currentImageCount,
+  maxImages,
+  className,
+}: UploadSectionProps) {
   const supportedFormats = ["JPG", "PNG", "WEBP"];
 
   return (
@@ -51,8 +58,13 @@ export default function UploadSection({ onImageUpload, className }: UploadSectio
               Upload Your Images
             </h3>
             
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              Drag and drop your images here, or click to browse (up to {maxImages} images)
+            </p>
+
+            {/* Display current image count */}
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Drag and drop your images here, or click to browse
+              {currentImageCount}/{maxImages} images uploaded
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-6">
