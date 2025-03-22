@@ -1,0 +1,11 @@
+# Allow all crawlers to access most of the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of non-essential routes
+Disallow: /api/           # Block API routes
+Disallow: /_next/         # Block Next.js internal files (e.g., JavaScript bundles)
+Disallow: /images/        # Block image directory if not needed for indexing (optional)
+
+# Point to your sitemap
+Sitemap: https://zero-bg.vercel.app/sitemap.xml
